@@ -31,18 +31,6 @@ product.promoPrice = promoPrice;
 }
 console.log(products)
 
-// if...else if chain to apply aditional discount
-let customerType= customerTypes[i];
-let extraDiscount = 0;
-
-if (customerType = "senior") {
-    extraDiscount = .07;
-} else if (customerType = "student"){
-    extraDiscount = .05;
-} else {
-extraDiscount = 0
-}
-
 let customerTypes = ['regular', 'student', 'senior'];
 
 for (let i = 0; i < 3; i++) {
@@ -53,6 +41,24 @@ for(let product of products) {
     product.inventory--;
 }
 }
+
+
+let customerType= customerTypes[i];
+let extraDiscount = 0;
+
+if (customerType = "senior") {
+    extraDiscount = .07;
+} else if (customerType = "student"){
+    extraDiscount = .05;
+} else {
+extraDiscount = 0
+}
  let finalTotal = subTotal * (1-extraDiscount);
+ console.log(`Customer ${i +1} (${customerType}): $${finalTotal.toFixed(2)}`);
 }
 
+
+let exProduct = products[0];
+for (let key in exProduct) {
+console.log(`${key}: ${exProduct[key]}`);
+}
