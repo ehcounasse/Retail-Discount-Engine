@@ -30,3 +30,14 @@ let promoPrice = product.price * (1-discount)
 product.promoPrice = promoPrice;
 }
 console.log(products)
+
+let customerType; 
+let extraDiscount;
+
+if (customerType = "senior") {
+    extraDiscount = .07;
+} else if (customerType = "student"){
+    extraDiscount = .05;
+} else {
+extraDiscount = 0
+}
